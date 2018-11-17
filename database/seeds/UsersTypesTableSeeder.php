@@ -16,13 +16,13 @@ class UsersTypesTableSeeder extends Seeder
 
 
     	   UserType::insert([
-                'user_type' => 'hr_manager',
+                'type_name' => 'hr_manager',
                 'created_at'   => Carbon::now(),
                 'updated_at'   => Carbon::now()
         ]);
 
 	        UserType::insert([
-                'user_type' => 'job_moderator',
+                'type_name' => 'job_moderator',
                 'created_at'   => Carbon::now(),
                 'updated_at'   => Carbon::now()
 	        ]);

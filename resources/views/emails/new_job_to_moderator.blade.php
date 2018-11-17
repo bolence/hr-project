@@ -14,7 +14,7 @@
 	<p>Job title: {{ $job->title }} </p>
 	<p>Job description: {{ $job->description }}</p>
 
-	<p> If you want to approve this job, click <a href="{{ $approve_link }}">here.</a> or <a href="{{ $spam_link }}">mark</a> as spam.</p>
+	<p> If you want to approve this job, click <a href="{{ $approve_link }}">here </a> or <a href="{{ $spam_link }}">mark</a> as spam.</p>
 	
 </body>
 </html>

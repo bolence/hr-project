@@ -10,6 +10,7 @@ use Exception;
 use App\User;
 use App\Job;
 use Mail;
+use Log;
 
 
 class JobController extends Controller
@@ -56,7 +57,7 @@ class JobController extends Controller
 
        }catch( Exception $e ) {
 
-        Log::error('Error occured on line: ' . $e->getLine() . ' in a file ' . $e->getFile());
+        Log::error('Error occured on line: ' . $e->getLine() . ' in a file ' . $e->getFile() . ' with message ' . $e->getMessage());
         return redirect()->back()->with('danger', 'Something went wrong. Job not recorded.');
 
        }
