@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\UserType;
+use Carbon\Carbon;
 
 class UsersTypesTableSeeder extends Seeder
 {
