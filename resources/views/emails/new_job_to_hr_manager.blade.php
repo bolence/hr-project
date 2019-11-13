@@ -12,7 +12,7 @@
 
 	<p>your new job posted on platform and now is in moderaton mode. <br/> When a job board moderator approve your job, we will inform you about that.</p>
 
-	<p>Thank you for undestanding.</p>
-	
+	<p>Thank you for posting jobs.</p>
+
 </body>
 </html>

@@ -5,7 +5,6 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Job;
 
 class SendEmailToJobModerator extends Mailable
@@ -34,7 +33,7 @@ class SendEmailToJobModerator extends Mailable
         return $this->from('new_job@jobs.com')
                     ->subject('New job on a platform')
                     ->view('emails.new_job_to_moderator')
-                    ->with([ 
+                    ->with([
                         'approve_link' => env('APP_URL') . '/job/' . $this->job->id . '/approve',
                         'spam_link'    => env('APP_URL') . '/job/'  . $this->job->id . '/spam',
                         'job' => $this->job

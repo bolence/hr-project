@@ -81,33 +81,33 @@
                     <hr>
 
                  @include('layouts.partials.alerts')
-                
+
                     <div class="row">
                     <div class="form-group col-md-12">
                         <label for="">Title</label>
-                        <input type="text" class="form-control @if($errors->first('title'))is-invalid @endif" name="title" placeholder="Enter job title">
+                        <input type="text" class="form-control @if($errors->first('title'))is-invalid @endif" name="title" placeholder="Enter job title" value="{{ old('title') }}">
                         <span class="text-danger">{{ $errors->first('title') }}</span>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label for="">Email address</label>
+                        <input type="email" class="form-control @if($errors->first('email'))is-invalid @endif" name="email" placeholder="Enter email" placeholder="Enter email address" value="{{ old('email') }}">
+                        <span class="text-danger">{{ $errors->first('email') }}</span>
                     </div>
 
                      <div class="form-group col-md-12">
                         <label for="">Description</label>
-                        <textarea name="description" class="form-control textarea @if($errors->first('description'))is-invalid @endif" placeholder="Enter job description"></textarea> 
+                        <textarea name="description" class="form-control textarea @if($errors->first('description'))is-invalid @endif" placeholder="Enter job description">{{ old('description') }}</textarea>
                         <span class="text-danger">{{ $errors->first('description') }}</span>
                     </div>
 
-                      <div class="form-group col-md-12">
-                        <label for="">Email address</label>
-                        <input type="email" class="form-control @if($errors->first('email'))is-invalid @endif" name="email" placeholder="Enter email" placeholder="Enter email address">
-                        <span class="text-danger">{{ $errors->first('email') }}</span>
                     </div>
 
-                    </div>
-                
-                    
+
                     <button type="submit" class="btn btn-primary float-right">Save job</button>
 
                 </form>
-            
+
             </div>
         </div>
 
